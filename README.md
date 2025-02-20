@@ -57,3 +57,11 @@ Backend: http://localhost:3001/graphql
 2. Connect your repository to Render
 3. Set up environment variables on Render
 4. Deploy & watch your app go live! 🎉
+
+## Future Improvements
+•	🔹 Implement OAuth login
+•	🔹 Add book ratings & reviews
+•	🔹 Improve UI/UX design
+
+## License
+### This project is licensed under the MIT License.
