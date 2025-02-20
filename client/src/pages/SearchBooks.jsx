@@ -29,7 +29,7 @@ const SearchBooks = () => {
     return () => saveBookIds(savedBookIds);
   }, [savedBookIds]);
 
-  const GOOGLE_API_KEY = "AIzaSyCQXwrppT5LkwL2uSsjf-EKoJngiFnHa2E"; // Add your API key
+const GOOGLE_API_KEY = "AIzaSyCQXwrppT5LkwL2uSsjf-EKoJngiFnHa2E"; // Add your API key
 
 const handleFormSubmit = async (event) => {
   event.preventDefault();

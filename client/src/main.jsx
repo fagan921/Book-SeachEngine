@@ -10,7 +10,7 @@ import SavedBooks from './pages/SavedBooks';
 
 // Create Apollo Client instance
 const client = new ApolloClient({
-  uri: '/graphql', // Ensure this matches your server's GraphQL endpoint
+  uri: 'http://localhost:3001/graphql', // Explicitly set the full URL
   cache: new InMemoryCache(),
   credentials: 'include', // Ensures cookies/token are sent with requests
 });

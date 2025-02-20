@@ -20,9 +20,14 @@ const server = new ApolloServer({
 async function startApolloServer() {
   await server.start();
 
+  // ✅ Enable CORS for Frontend at http://localhost:3000
+  app.use(cors({
+    origin: 'http://localhost:3000', // Allow requests from the frontend
+    credentials: true, // Allow cookies/auth headers
+  }));
+
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
-  app.use(cors());
 
   // Apply Apollo GraphQL middleware
   app.use('/graphql', expressMiddleware(server));
