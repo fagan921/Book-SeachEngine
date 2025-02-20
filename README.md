@@ -49,5 +49,5 @@ JWT_SECRET=<your-secret-key>
 npm run develop
 ```
 
-	•	Frontend: http://localhost:3000
-	•	Backend: http://localhost:3001/graphql
+Frontend: http://localhost:3000
+Backend: http://localhost:3001/graphql
