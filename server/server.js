@@ -1,3 +1,5 @@
+require('dotenv').config(); // ✅ Load environment variables
+
 const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
@@ -8,31 +10,31 @@ const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
+
+// ✅ Define `app` first
 const app = express();
 
-// Initialize Apollo Server
+// ✅ Initialize Apollo Server
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware, // Middleware for authentication
+  context: authMiddleware,
 });
 
 async function startApolloServer() {
   await server.start();
 
-  // ✅ Enable CORS for Frontend at http://localhost:3000
-  app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from the frontend
-    credentials: true, // Allow cookies/auth headers
-  }));
-
+  // ✅ Middleware setup after `app` is defined
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
 
-  // Apply Apollo GraphQL middleware
+  // ✅ Fix: Apply CORS properly
+  app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+
+  // ✅ Apply Apollo middleware
   app.use('/graphql', expressMiddleware(server));
 
-  // Serve static assets in production
+  // ✅ Serve static assets in production
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/dist')));
 
@@ -41,7 +43,7 @@ async function startApolloServer() {
     });
   }
 
-  // Connect to MongoDB and start the server
+  // ✅ Connect to MongoDB and start the server
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`🌍 Now running on http://localhost:${PORT}`);
@@ -50,4 +52,5 @@ async function startApolloServer() {
   });
 }
 
+// ✅ Start the server
 startApolloServer();
