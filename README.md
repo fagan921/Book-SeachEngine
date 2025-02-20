@@ -3,7 +3,7 @@
 A full-stack **MERN** application that allows users to search for books using the **Google Books API**, save their favorite books, and manage their account using authentication.
 
 ## 🚀 Live Demo
-[**View the Deployed App on Render**]([<insert-your-render-url-here>](https://book-seachengine-client.onrender.com/))
+[**View the Deployed App on Render**](https://book-seachengine-client.onrender.com/))
 
 ---
 
@@ -28,8 +28,8 @@ A full-stack **MERN** application that allows users to search for books using th
 ## 📂 Installation & Setup
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/fagan921/Book-SeachEngine.git
+cd Book-SeachEngine
 ```
 
 ### 2️⃣ Install Dependencies
