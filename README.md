@@ -53,7 +53,7 @@ Frontend: http://localhost:3000
 Backend: http://localhost:3001/graphql
 
 ## Deployment (Render & MongoDB)
-	1.	Push all changes to GitHub
-	2.	Connect your repository to Render
-	3.	Set up environment variables on Render
-	4.	Deploy & watch your app go live! 🎉
+1. Push all changes to GitHub
+2. Connect your repository to Render
+3. Set up environment variables on Render
+4. Deploy & watch your app go live! 🎉
