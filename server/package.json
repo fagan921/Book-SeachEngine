@@ -11,8 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "@apollo/server": "^4.11.3",
+    "bcryptjs": "^3.0.2",
     "express": "^4.17.1",
+    "graphql": "^16.10.0",
+    "graphql-tag": "^2.12.6",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^8.0.0"
   },
