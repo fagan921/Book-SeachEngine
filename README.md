@@ -27,8 +27,27 @@ A full-stack **MERN** application that allows users to search for books using th
 
 ## 📂 Installation & Setup
 ### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
+
 ### 2️⃣ Install Dependencies
+```sh
+npm run install
+```
+
 ### 3️⃣ Set Up Environmental Variables
+  Create an .env file inside the _server_ folder and add:
+```sh
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority
+JWT_SECRET=<your-secret-key>
+```
+
 ### 4️⃣ Start the Development Server
 ```sh
 npm run develop
+```
+
+	•	Frontend: http://localhost:3000
+	•	Backend: http://localhost:3001/graphql
